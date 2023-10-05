@@ -65,43 +65,43 @@ export default function Projects() {
               Oops, you do not have any GitHub projects yet...
             </h2>
           )}
-          <div class="panel-group" id="accordion">
           {/*<h2> Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </h2> */}
-          <button class="btn btn-primary" type="submit" data-toggle="collapse" data-target="#desplegable" aria-expanded="true" aria-controls="desplegable">Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /></button>
-           <div class="collapse" id="desplegable">
+         
+          <div class="panel-group" id="accordion">
+          
+            <div class="collapse" id="desplegable">
 
-             <div class="panel">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-              </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse in">
-              <div class="panel-body">
-                      <p>This practice consists of developing an iterative pseudo-navigation algorithm.
-                      I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
-                      but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
+              <div class="panel">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
+                </h4>
+               </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">
+                        <p>This practice consists of developing an iterative pseudo-navigation algorithm.
+                        I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
+                        but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
+                  
+                        <code class="python"><pre>
+                          {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
+                            {"\t"}laser = [] {"\n"}
+                            {"\t"}for i in range(45,135):{"\n"}
+                                  {"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
+                                  {"\t"}{"\t"}angle = math.radians(i){"\n"}
+                                  {"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
+                                  {"\t"}{"\t"}print("distancia: ", dist){"\n"}
+                                  {"\t"}{"\t"}if (dist 	&#60; 0,3):{"\n"}
+                                    {"\t"}{"\t"}{"\t"}close_obj = True{"\n"}
+                            {"\t"}return close_obj{"\n"}
+                     
+                      </pre></code>
+                </p>  
                 
-                      <code class="python"><pre>
-                        {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
-                          {"\t"}laser = [] {"\n"}
-                          {"\t"}for i in range(45,135):{"\n"}
-                                {"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
-                                {"\t"}{"\t"}angle = math.radians(i){"\n"}
-                                {"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
-                                {"\t"}{"\t"}print("distancia: ", dist){"\n"}
-                                {"\t"}{"\t"}if (dist 	&#60; 0,3):{"\n"}
-                                  {"\t"}{"\t"}{"\t"}close_obj = True{"\n"}
-                          {"\t"}return close_obj{"\n"}
-                   
-                    </pre></code>
-              </p>  
-              
-                </div>
-            </div>
+                  </div>
+              </div>
           </div>
-
-              
+          </div>
           </div>
         <div>Before moving, the robot will check if there is any object nearby with the laser. If there is, 
           the robot will go backwards for 3 seconds. This would be his first state.
