@@ -119,9 +119,11 @@ export default function Projects() {
               Oops, you do not have any GitHub projects yet...
             </h2>
           )}
-          <button class="accordion">Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </button>
+          
           {/*<h2> Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </h2> */}
-          <div class="panel">This practice consists of developing an iterative pseudo-navigation algorithm.
+          <button class="accordion">Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </button>
+          <div class="panel">
+          <p>This practice consists of developing an iterative pseudo-navigation algorithm.
           I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
           but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
             
@@ -138,7 +140,8 @@ export default function Projects() {
                   {"\t"}return close_obj{"\n"}
                
                 </pre></code>
-        </div>
+          </p>
+          </div>
 
         <div>Before moving, the robot will check if there is any object nearby with the laser. If there is, 
           the robot will go backwards for 3 seconds. This would be his first state.
