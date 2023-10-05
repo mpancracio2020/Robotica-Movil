@@ -67,7 +67,7 @@ export default function Projects() {
           )}
           
           {/*<h2> Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </h2> */}
-          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#desplegable" aria-expanded="false" aria-controls="desplegable">Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /></button>
+          <button class="btn btn-primary" type="submit" data-toggle="collapse" data-target="#desplegable" aria-expanded="false" aria-controls="desplegable">Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /></button>
            <div class="collapse" id="desplegable">
               <p>This practice consists of developing an iterative pseudo-navigation algorithm.
               I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
