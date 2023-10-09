@@ -105,7 +105,8 @@ export default function Projects() {
             <h1>Practices</h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
-                <Accordion title={title} content={
+                <Accordion title={title} style={currentActiveKey === "0" ? { backgroundColor: "red" } : null}
+                  content={
                   <p>This practice consists of developing an iterative pseudo-navigation algorithm.
                         I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
                         but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
