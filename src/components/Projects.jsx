@@ -51,21 +51,6 @@ export default function Projects() {
       content: `This practice consists of developing an iterative pseudo-navigation algorithm.
                         I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
                         but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.`
-    },
-    {
-      title: 'Section 2',
-      content: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam
-      reprehenderit nam assumenda voluptatem ut. Ipsum eius dicta, officiis
-      quaerat iure quos dolorum accusantium ducimus in illum vero commodi
-      pariatur? Impedit autem esse nostrum quasi, fugiat a aut error cumque
-      quidem maiores doloremque est numquam praesentium eos voluptatem amet!
-      Repudiandae, mollitia id reprehenderit a ab odit!`
-    },
-    {
-      title: 'Section 3',
-      content: `Sapiente expedita hic obcaecati, laboriosam similique omnis architecto ducimus magnam accusantium corrupti
-      quam sint dolore pariatur perspiciatis, necessitatibus rem vel dignissimos
-      dolor ut sequi minus iste? Quas?`
     }
   ];
   //pito
