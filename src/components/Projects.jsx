@@ -42,10 +42,7 @@ export default function Projects() {
     },
     [data]
   );
-   <button class="accordion">Section 1</button>
-            <div class="panel">
-            <p>Lorem ipsum...</p>
-          </div>
+ 
 
   return (
     <Element name={"Projects"} id="projects">
@@ -69,6 +66,10 @@ export default function Projects() {
               Oops, you do not have any GitHub projects yet...
             </h2>
           )}
+          <button class="accordion">Section 1</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
           {/*<h2> Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </h2> */}
 
          
