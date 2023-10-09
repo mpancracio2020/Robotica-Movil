@@ -80,7 +80,7 @@ export default function Projects() {
         
           { /*fefe*/} 
             <div>
-            <h1>Basic Vacuum Cleaner</h1>
+            <h1>Basic Vacuum Cleaner <iconify-icon icon="solar:smart-vacuum-cleaner-outline"></iconify-icon></h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content..'} 
