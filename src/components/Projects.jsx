@@ -226,7 +226,7 @@ export default function Projects() {
 
           { /*fefe*/} 
             <div>
-            <h1>Follow Line<Icon icon="ion:car-sport-sharp" className="display-4" /</h1>
+            <h1>Follow Line<Icon icon="ion:car-sport-sharp" className="display-4" />/</h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content...'} 
