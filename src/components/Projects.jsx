@@ -105,7 +105,7 @@ export default function Projects() {
             <h1>Practices</h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
-                <Accordion title={title} style={{ backgroundColor: '#343a40' }} 
+                <Accordion title={'Basic Vacuum Cleaner'} style={{ backgroundColor: '#343a40' }} 
                   content={
                   <p>This practice consists of developing an iterative pseudo-navigation algorithm.
                         I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
