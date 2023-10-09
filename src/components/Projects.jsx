@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from '../pages/Accordion';
+import Accordion from '../Accordion';
 import { useAppContext } from "../appContext";
 import { useSelector } from "react-redux";
 import {
