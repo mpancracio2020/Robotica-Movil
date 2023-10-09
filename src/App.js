@@ -110,17 +110,18 @@ export default function App() {
     );
   } else {
     return (
-      //
-       <div>
-        <h1>React Accordion Demo</h1>
-        <div className="accordion">
-          {accordionData.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
-          ))}
-        </div>
-      </div>
-      //
+      
       <HashRouter>
+        //
+         <div>
+          <h1>React Accordion Demo</h1>
+          <div className="accordion">
+            {accordionData.map(({ title, content }) => (
+              <Accordion title={title} content={content} />
+            ))}
+          </div>
+        </div>
+      //
         <ThemeProvider theme={themes[theme]}>
           <ScrollToTop />
           <GlobalStyles />
