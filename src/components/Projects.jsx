@@ -237,10 +237,7 @@ export default function Projects() {
     { /*fefe*/}             
                 
                 
-                } />
-              ))}
-            </div>
-          </div>
+
           { /**/}
          
          
