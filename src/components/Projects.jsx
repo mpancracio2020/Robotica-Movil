@@ -17,7 +17,7 @@ import { Icon } from "@iconify/react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
-
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 var laserD = require('../images/laser_def.png')
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
