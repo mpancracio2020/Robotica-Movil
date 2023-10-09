@@ -66,6 +66,11 @@ export default function Projects() {
             </h2>
           )}
           {/*<h2> Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" /> </h2> */}
+
+          <button class="accordion">Section 1</button>
+            <div class="panel">
+            <p>Lorem ipsum...</p>
+          </div>
          
           <div class="panel-group" id="accordion">
           
