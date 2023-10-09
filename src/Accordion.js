@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 
 const Accordion = ({ title, content }) => {
   const [isActive, setIsActive] = useState(false);
+  
 
   return (
     <div className="accordion-item">
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
+      <div className="accordion-title" onClick={() => setIsActive(!isActive)} style={{ backgroundColor: "red" } }>
         <div>{title}</div>
         <div>{isActive ? '-' : '+'}</div>
       </div>
