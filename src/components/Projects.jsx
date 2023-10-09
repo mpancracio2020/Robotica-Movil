@@ -48,28 +48,9 @@ export default function Projects() {
   const accordionData = [
     {
       title: 'Section 1',
-      content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis sapiente
-      laborum cupiditate possimus labore, hic temporibus velit dicta earum
-      suscipit commodi eum enim atque at? Et perspiciatis dolore iure
-      voluptatem.`
-       <p>This practice consists of developing an iterative pseudo-navigation algorithm.
+      content: `This practice consists of developing an iterative pseudo-navigation algorithm.
                         I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
-                        but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
-                  
-                        <code class="python"><pre>
-                          {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
-                            {"\t"}laser = [] {"\n"}
-                            {"\t"}for i in range(45,135):{"\n"}
-                                  {"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
-                                  {"\t"}{"\t"}angle = math.radians(i){"\n"}
-                                  {"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
-                                  {"\t"}{"\t"}print("distancia: ", dist){"\n"}
-                                  {"\t"}{"\t"}if (dist 	&#60; 0,3):{"\n"}
-                                    {"\t"}{"\t"}{"\t"}close_obj = True{"\n"}
-                            {"\t"}return close_obj{"\n"}
-                     
-                      </pre></code>
-                </p>  
+                        but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.`
     },
     {
       title: 'Section 2',
@@ -123,7 +104,31 @@ export default function Projects() {
             <h1>React Accordion Demo</h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
-                <Accordion title={title} content={content} />
+                <Accordion title={title} content={
+                  <p>This practice consists of developing an iterative pseudo-navigation algorithm.
+                        I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
+                        but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
+                  
+                        <code class="python"><pre>
+                          {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
+                            {"\t"}laser = [] {"\n"}
+                            {"\t"}for i in range(45,135):{"\n"}
+                                  {"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
+                                  {"\t"}{"\t"}angle = math.radians(i){"\n"}
+                                  {"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
+                                  {"\t"}{"\t"}print("distancia: ", dist){"\n"}
+                                  {"\t"}{"\t"}if (dist 	&#60; 0,3):{"\n"}
+                                    {"\t"}{"\t"}{"\t"}close_obj = True{"\n"}
+                            {"\t"}return close_obj{"\n"}
+                     
+                      </pre></code>
+                </p> 
+                
+                
+                
+                
+                
+                } />
               ))}
             </div>
           </div>
