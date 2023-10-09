@@ -230,7 +230,7 @@ export default function Projects() {
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content...'} 
-                  content={hola
+                  content={'hola'
 
 
 
