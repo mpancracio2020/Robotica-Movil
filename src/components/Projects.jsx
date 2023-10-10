@@ -230,7 +230,84 @@ export default function Projects() {
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content...'} 
-                  content={'hola'
+                  content={
+                  <p>
+                    This practice consists of keeping track of the red line (in this case) in order to travel the circuit. 
+                    The tracking is implemented thanks to the car\'s camera, which will tell us the almost exact position of the line with respect to the car. {"\n"}
+                    For color filtering we have used the following method:
+
+                    <code>
+                          <pre>{"\n"}
+
+                              def image_filter(img):{"\n"}{"\n"}
+
+                                {"\t"}height, width, channels = img.shape{"\n"}
+                                {"\t"}descentre = 160{"\n"}
+                                {"\t"}rows_to_watch = 20{"\n"}
+                              
+                                {"\t"}img_hsv=cv2.cvtColor(img, cv2.COLOR_BGR2HSV){"\n"}{"\n"}
+                              
+                                {"\t"}lower_red = np.array([0,50,50]){"\n"}
+                                {"\t"}upper_red = np.array([10,255,255]){"\n"}{"\n"}
+                              
+                                {"\t"}mask0 = cv2.inRange(img_hsv, lower_red, upper_red){"\n"}{"\n"}
+                              
+                                {"\t"}# upper mask (170-180){"\n"}
+                                {"\t"}lower_red = np.array([170,50,50]){"\n"}
+                                {"\t"}upper_red = np.array([180,255,255]){"\n"}
+                                {"\t"}mask1 = cv2.inRange(img_hsv, lower_red, upper_red){"\n"}{"\n"}
+                              
+                                {"\t"}final_img = mask0+mask1{"\n"}{"\n"}
+                          
+                                {"\t"}return final_img{"\n"}
+                          </pre>
+                    </code>
+
+                    After filtering the image we proceed to calculate the moment and the centroids of the image, with them we will get the error, {"\n"}
+                    which will be the centroid at x minus half of the image
+
+                    <code>
+                      <pre>
+
+                        m = cv2.moments(mask, False){"\n"}{"\n"}
+                        
+                        try:{"\n"}
+                              {"\t"}cx, cy = m['m10']/m['m00'], m['m01']/m['m00']{"\n"}
+                        except ZeroDivisionError:{"\n"}
+                              {"\t"}cy, cx = height/2, width/2{"\n"}{"\n"}
+                    
+                    
+                        # Bitwise-AND mask and original image{"\n"}
+                        res = cv2.bitwise_and(img_hsv,img_hsv, mask= mask){"\n"}{"\n"}
+                    
+                        contours, __ = cv2.findContours(mask, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_TC89_L1){"\n"}
+                        print(str(len(contours))){"\n"}
+                        centres = []{"\n"}{"\n"}
+                        
+                        for i in range(len(contours)):{"\n"}
+                              {"\t"}moments = cv2.moments(contours[i]){"\n"}
+                              {"\t"}try:{"\n"}
+                                  {"\t"}  {"\t"}centres.append((int(moments['m10']/moments['m00']), int(moments['m01']/moments['m00']))){"\n"}
+                                  {"\t"}  {"\t"}cv2.circle(res, centres[-1], 10, (0, 255, 0), -1){"\n"}
+                              {"\t"}except ZeroDivisionError:{"\n"}
+                                  {"\t"}  {"\t"}pass{"\n"}{"\n"}
+                    
+                        cv2.circle(res,(int(cx), int(cy)), 10,(0,0,255),-1){"\n"}{"\n"}
+                        
+                        cv2.waitKey(1){"\n"}{"\n"}
+                         
+                        error_x = cx - width / 2 # This is the error with red line.{"\n"}
+ 
+                      
+                      
+                      
+        
+                      </pre>
+                      
+                    
+                    </code>
+                    
+                    </p>
 
 
 
