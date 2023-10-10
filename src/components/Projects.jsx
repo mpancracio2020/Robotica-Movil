@@ -267,7 +267,7 @@ export default function Projects() {
                     which will be the centroid at x minus half of the image
 
                     <code>
-                      <pre>
+                      <pre>{"\n"}
 
                         m = cv2.moments(mask, False){"\n"}{"\n"}
                         
@@ -304,6 +304,47 @@ export default function Projects() {
         
                       </pre>
                       
+                    
+                    </code>
+
+                    After this, we only have to pass the error to the PID, which returns an angular velocity. {"\n"}
+                    This speed will be the error introduced to the linear speed PID to slow down in curves.
+
+                    <code>
+                      <pre>{"\n"}
+                      # Time to compute the error correction of angular and linear vels.{"\n"}
+                      pid_controller = PIDController(KP_, KI_, KD_){"\n"}
+                      input_error_ang = -error_x / width{"\n"}
+                      
+                      # Get angular vel.{"\n"}
+                      angular_vel = pid_controller.compute_angular_vel(input_error_ang){"\n"}
+                      
+                      
+                      # Linear PID:{"\n"}
+                      Kp_linear = 0.8{"\n"}
+                      Ki_linear = 0.01{"\n"}
+                      Kd_linear = 0.9{"\n"}
+                      
+                      linear_velocity_pid_controller = LinearVelocityPIDController(Kp_linear, Ki_linear, Kd_linear){"\n"}
+                      
+                      linear_vel = linear_velocity_pid_controller.update(angular_vel){"\n"}
+                      
+                  
+                      # Compensates the angular speed with the linear speed{"\n"}
+                      
+                      angular_vel =  -error_x / width{"\n"}
+                      final_lineal_vel = (init_vel - abs((init_vel/2)*linear_vel)){"\n"}
+                      
+                      if(final_lineal_vel < 1): #maybe the compute is negative... and the car goes backward{"\n"}
+                        {"\t"}final_lineal_vel = 1{"\n"}
+                      
+                      
+                      
+                      
+                      
+                      </pre>
+                    
+                    
                     
                     </code>
                     
