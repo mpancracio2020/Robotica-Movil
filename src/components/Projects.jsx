@@ -335,7 +335,7 @@ export default function Projects() {
                       angular_vel =  -error_x / width{"\n"}
                       final_lineal_vel = (init_vel - abs((init_vel/2)*linear_vel)){"\n"}
                       
-                      if(final_lineal_vel < 1): #maybe the compute is negative... and the car goes backward{"\n"}
+                      if(final_lineal_vel &lt; 1): #maybe the compute is negative... and the car goes backward{"\n"}
                         {"\t"}final_lineal_vel = 1{"\n"}
                       
                       
