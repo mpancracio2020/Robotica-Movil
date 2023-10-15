@@ -344,7 +344,10 @@ export default function Projects() {
                       
                       </pre>
                     
-                    
+                    Here is an example video: {"\n"} {"\n"}
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/INYLR4tJlCU?si=FadzPEf-TgiYn9Wb" 
+                              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+                              picture-in-picture; web-share" allowfullscreen></iframe>  </center>
                     
                     </code>
                     
