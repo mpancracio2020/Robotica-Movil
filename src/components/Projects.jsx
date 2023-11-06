@@ -374,25 +374,76 @@ export default function Projects() {
                 First of all, it is to find the points of interest, that is, the target point, and the current point of the robot.
                 To do this, we determine these points with the following instructions.
                         <code class="python"><pre>
-                          {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
-                            {"\t"}laser = [] {"\n"}
-                            {"\t"}for i in range(45,135):{"\n"}
-                                  {"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
-                                  {"\t"}{"\t"}angle = math.radians(i){"\n"}
-                                  {"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
-                                  {"\t"}{"\t"}print("distancia: ", dist){"\n"}
-                                  {"\t"}{"\t"}if (dist 	&#60; 0,3):{"\n"}
-                                    {"\t"}{"\t"}{"\t"}close_obj = True{"\n"}
-                            {"\t"}return close_obj{"\n"}
+                            {"\t"}carPos = [HAL.getPose3d().x,HAL.getPose3d().y]{"\n"}
+                            {"\t"}targetPos = [currentTarget.getPose().x, currentTarget.getPose().y]{"\n"}
                      
                       </pre></code>
 
                 
                 Next we establish the attractive force vector.
+
+                    <code class="python"><pre>
+                        {"\t"}x_att, y_att = absolute2relative(target_pos[0], target_pos[1], carPos[0],carPos[1], HAL.getPose3d().yaw){"\n"}
+                        {"\t"}f_att = [x_att, y_att]{"\n"}
+                        {"\t"}f_att = normalize(f_att){"\n"}
+                     
+                      </pre></code>
+          
+                    
                 Next we can find the repulsive force, for this we will use the laser, from which we will take the measurements, and we will process them so that they are useful to us.
                 I have layered the measurements to avoid noise in the measurements, since we will use the average of all of them.
 
+                    <code class="python"><pre>
+                        {"\t"}def parse_laser_data (laser_data):{"\n"}
+                        {"\t"}{"\t"}laser = []{"\n"}
+                        {"\t"}{"\t"}i = 0{"\n"}
+                        {"\t"}{"\t"}dist = laser_data.values{"\n"}
+                        {"\t"}{"\t"}collision = False{"\n"}
+                        {"\t"}{"\t"}if len(dist) != 0:{"\n"}
+                        {"\t"}{"\t"}{"\t"}while (i < 180):{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}if dist > 10.0:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}dist = 10.0{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}angle = math.radians(i-90) # because the front of the robot is -90 degrees{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
+                              
+                        {"\t"}{"\t"}{"\t"}{"\t"}if i < 95 and i > 15:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}if dist < 0.4:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}{"\t"}collision = True{"\n"}
+                               {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}{"\t"}i+=1{"\n"}
+                         {"\t"}return laser, collision{"\n"}
+                        
+                                             
+                      </pre></code>
 
+                Then, calculate repulsive force
+
+                          <code><pre>
+                          
+                          {"\t"}def get_repulsive_force(laser_data):{"\n"}
+                          {"\t"}{"\t"}laser,c = parse_laser_data(laser_data){"\n"}
+                          {"\t"}{"\t"}laser_vec = []{"\n"}
+                          
+                          {"\t"}{"\t"}for dist, angle in laser:{"\n"}
+                            
+                            {"\t"}{"\t"}{"\t"}x = dist * math.cos(angle) * -1{"\n"}
+                            {"\t"}{"\t"}{"\t"}y = dist * math.sin(angle) * -1{"\n"}
+                            {"\t"}{"\t"}{"\t"}v = (x,y){"\n"}
+                            {"\t"}{"\t"}{"\t"}laser_vec += [v]{"\n"}
+                            {"\t"}{"\t"}{"\t"}laser_mean = np.mean(laser_vec,axis=0){"\n"}
+                          
+                          
+                          {"\t"}{"\t"}if abs(laser_mean[0]) < 0.02: # eliminate noise{"\n"}
+                            {"\t"}{"\t"}{"\t"}laser_mean[0] = 0{"\n"}
+                          
+                          {"\t"}{"\t"}if abs(laser_mean[1]) < 0.02:{"\n"}
+                            {"\t"}{"\t"}{"\t"}laser_mean[1] = 0{"\n"}
+                          
+                          {"\t"}return laser_mean, c{"\n"}
+ 
+                          
+                          </pre>
+                          </code>
                 Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity
 
                 And with that we would have the practice
