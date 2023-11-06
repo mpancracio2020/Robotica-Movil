@@ -364,15 +364,15 @@ export default function Projects() {
     { /*fefe*/}
 
            <div>
-            <h1>Basic Vacuum Cleaner <Icon icon="solar:smart-vacuum-cleaner-outline" className="display-4" /></h1>
+            <h1>Obstacle Avoidance <Icon icon="game-icons:f1-car" className="display-4" /></h1>
             <div className="accordion">
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content..'} 
                   content={
-                  <p>This practice consists of developing an iterative pseudo-navigation algorithm.
-                        I have used the bumper and laser sensor to avoid collisions. The laser will predominate in the measurements, 
-                        but it may be the case that in some turns it does not sense a corner and that is where the bumper comes into play.
-                  
+                  <p>This practice consists of developing an iterative local navigation algorithm using VFF.
+                      
+                First of all, it is to find the points of interest, that is, the target point, and the current point of the robot.
+                To do this, we determine these points with the following instructions.
                         <code class="python"><pre>
                           {"\n"}def parse_laser_data(laser_data, close_obj): {"\n"}
                             {"\t"}laser = [] {"\n"}
@@ -387,10 +387,17 @@ export default function Projects() {
                      
                       </pre></code>
 
-                    Before moving, the robot will check if there is any object nearby with the laser. If there is, 
-                    the robot will go backwards for 3 seconds. This would be his first state.
+                
+                Next we establish the attractive force vector.
+                Next we can find the repulsive force, for this we will use the laser, from which we will take the measurements, and we will process them so that they are useful to us.
+                I have layered the measurements to avoid noise in the measurements, since we will use the average of all of them.
 
-                    <code>
+
+                Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity
+
+                And with that we would have the practice
+                    
+                      <code>
                         <pre>{"\n"}
                         if (close_obj == True):{"\n"}
                         {"\t"}time_begin = rospy.Time.now() # start to count seconds.{"\n"}
