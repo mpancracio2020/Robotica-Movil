@@ -445,14 +445,16 @@ export default function Projects() {
                           </pre>
                           </code>
                 {"\n"}
-                <p>
-                Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity {"\n"}{"\n"}
+                <p><pre>
+                Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity.{"\n"}{"\n"}
                 And with that we would have the practice.{"\n"}{"\n"}
 
 
                 Here is an example video: {"\n"} {"\n"}
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DZqT9qP41wE?si=FvD6IY6zgynJ4Y_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
-                    </p>
+                    
+                    
+              </pre></p>
              </p>
 
 
