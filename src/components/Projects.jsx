@@ -452,7 +452,14 @@ export default function Projects() {
                 Here is an example video: {"\n"} {"\n"}
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DZqT9qP41wE?si=FvD6IY6zgynJ4Y_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
                     
-                      
+             </p>
+
+
+
+                    } />
+                 
+              ))}
+            </div>         
             </div>
           {/*mainProjects.length !== 0 && (
             <>
