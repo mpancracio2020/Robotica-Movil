@@ -400,15 +400,15 @@ export default function Projects() {
                         {"\t"}{"\t"}dist = laser_data.values{"\n"}
                         {"\t"}{"\t"}collision = False{"\n"}
                         {"\t"}{"\t"}if len(dist) != 0:{"\n"}
-                        {"\t"}{"\t"}{"\t"}while (i < 180):{"\n"}
+                        {"\t"}{"\t"}{"\t"}while (i &lt; 180):{"\n"}
                         {"\t"}{"\t"}{"\t"}{"\t"}dist = laser_data.values[i]{"\n"}
-                        {"\t"}{"\t"}{"\t"}{"\t"}if dist > 10.0:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}if dist &gt; 10.0:{"\n"}
                         {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}dist = 10.0{"\n"}
                         {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}angle = math.radians(i-90) # because the front of the robot is -90 degrees{"\n"}
                         {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}laser += [(dist, angle)]{"\n"}
                               
-                        {"\t"}{"\t"}{"\t"}{"\t"}if i < 95 and i > 15:{"\n"}
-                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}if dist < 0.4:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}if i &lt; 95 and i &gt; 15:{"\n"}
+                        {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}if dist &lt; 0.4:{"\n"}
                         {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}{"\t"}collision = True{"\n"}
                                {"\t"}{"\t"}{"\t"}{"\t"}{"\t"}{"\t"}i+=1{"\n"}
                          {"\t"}return laser, collision{"\n"}
@@ -433,10 +433,10 @@ export default function Projects() {
                             {"\t"}{"\t"}{"\t"}laser_mean = np.mean(laser_vec,axis=0){"\n"}
                           
                           
-                          {"\t"}{"\t"}if abs(laser_mean[0]) < 0.02: # eliminate noise{"\n"}
+                          {"\t"}{"\t"}if abs(laser_mean[0]) &lt; 0.02: # eliminate noise{"\n"}
                             {"\t"}{"\t"}{"\t"}laser_mean[0] = 0{"\n"}
                           
-                          {"\t"}{"\t"}if abs(laser_mean[1]) < 0.02:{"\n"}
+                          {"\t"}{"\t"}if abs(laser_mean[1]) &lt; 0.02:{"\n"}
                             {"\t"}{"\t"}{"\t"}laser_mean[1] = 0{"\n"}
                           
                           {"\t"}return laser_mean, c{"\n"}
