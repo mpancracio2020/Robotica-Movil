@@ -444,9 +444,9 @@ export default function Projects() {
                           
                           </pre>
                           </code>
-                Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity {"\n"}
+                Once we have the two components, it is time to calculate the resulting Force from which we will obtain linear and angular velocity {"\n"}{"\n"}
 
-                And with that we would have the practice
+                And with that we would have the practice {"\n"}{"\n"}
 
 
                 Here is an example video: {"\n"} {"\n"}
