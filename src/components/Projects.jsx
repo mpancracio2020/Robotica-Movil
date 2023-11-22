@@ -362,7 +362,7 @@ export default function Projects() {
           </div>
                 
     { /*fefe*/}
-
+    { /*------P3---------*/}
            <div>
             <h1>Obstacle Avoidance <Icon icon="game-icons:f1-car" className="display-4" /></h1>
             <div className="accordion">
@@ -464,6 +464,39 @@ export default function Projects() {
               ))}
             </div>         
             </div>
+
+  { /*------P4---------*/}
+           <div>
+            <h1> Global Navigation <Icon icon="fa:taxi" className="display-4" /></h1>
+            <div className="accordion">
+              {accordionData.map(({ title, content }) => (
+                <Accordion title={'More content..'} 
+                  content={
+                  <p>This practice consists of building a map based on an image, establishing an initial starting point and an objective to reach. Building a navigation map, where each position will have a value or cost.{"\n"}
+                    The objective is to reach the objective with the lowest possible cost. {"\n"}
+                    In this exercise we have assigned a higher cost to the diagonals than to the tangent movements, so that our cost would be something like this:
+                    
+
+                
+            
+
+            
+
+                Here is an example video: {"\n"} {"\n"}
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/DZqT9qP41wE?si=FvD6IY6zgynJ4Y_z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+                    
+                    
+              </pre></p>
+             </p>
+
+
+
+                    } />
+                 
+              ))}
+            </div>         
+            </div>
+          
           {/*mainProjects.length !== 0 && (
             <>
               <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
