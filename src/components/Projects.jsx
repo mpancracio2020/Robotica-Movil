@@ -477,7 +477,7 @@ export default function Projects() {
                     The objective is to reach the objective with the lowest possible cost. {"\n"}
                     In this exercise we have assigned a higher cost to the diagonals than to the tangent movements, so that our cost would be something like this:
                     <center>
-                     <img src={grad} />
+                     <img src={grad} width={250} height={250} alt='Large Pizza' />
                     </center>
                    
                     
