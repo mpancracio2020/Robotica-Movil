@@ -477,11 +477,13 @@ export default function Projects() {
                     The objective is to reach the objective with the lowest possible cost. {"\n"}
                     In this exercise we have assigned a higher cost to the diagonals than to the tangent movements, so that our cost would be something like this:
                     <center>
-                     <img src={grad} width={250} height={250} alt='Large Pizza' />
+                     <img src={grad} width={350} height={350} alt='Large Pizza' />
                     </center>
-                   
-                    
 
+                    Once we have our map, we proceed to navigate with it, to do this we must know the route, and if we are getting closer or further away, or even if we have already arrived.
+                   
+              
+                    <p></p>
                 
             
 
