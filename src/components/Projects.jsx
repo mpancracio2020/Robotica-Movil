@@ -19,6 +19,7 @@ import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 var laserD = require('../images/laser_def.png')
+var grad = require('../images/1.png')
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
   const { theme } = useAppContext();
@@ -475,6 +476,10 @@ export default function Projects() {
                   <p>This practice consists of building a map based on an image, establishing an initial starting point and an objective to reach. Building a navigation map, where each position will have a value or cost.{"\n"}
                     The objective is to reach the objective with the lowest possible cost. {"\n"}
                     In this exercise we have assigned a higher cost to the diagonals than to the tangent movements, so that our cost would be something like this:
+                    <center>
+                     <img src={grad} />
+                    </center>
+                   
                     
 
                 
