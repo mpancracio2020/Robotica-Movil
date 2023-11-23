@@ -477,7 +477,7 @@ export default function Projects() {
               {accordionData.map(({ title, content }) => (
                 <Accordion title={'More content..'} 
                   content={
-                  <h1>Implementation</h1> 
+                  <h2>Implementation</h2> 
                   <p>This practice consists of building a map based on an image, establishing an initial starting point and an objective to reach. Building a navigation map, where each position will have a value or cost.{"\n"}
                     The objective is to reach the objective with the lowest possible cost. {"\n"}
                     In this exercise we have assigned a higher cost to the diagonals than to the tangent movements, so that our cost would be something like this:
@@ -497,7 +497,7 @@ export default function Projects() {
 
                     <p></p>
 
-                    <h2>Issues and solutions</h2>
+                    <h3>Issues and solutions</h3>
             
 
             
