@@ -500,7 +500,10 @@ export default function Projects() {
                     <p></p>
 
                     <h3>Issues and solutions</h3>
-            
+                      <p>
+                        One problem was diagonal positions, so the robot frequently goes diagonally and thats a problem. To solve that, I have implement one more method {"\n"}
+                        to check this positions, like normal ones.
+                      </p>            
 
             
 
