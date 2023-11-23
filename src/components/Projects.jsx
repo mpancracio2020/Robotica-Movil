@@ -18,8 +18,12 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+// VARIABLES IMGS
 var laserD = require('../images/laser_def.png')
 var grad = require('../images/1.png')
+var vff = require('../images/Virtual-Force-Field-algorithm.png')
+
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
   const { theme } = useAppContext();
@@ -481,10 +485,15 @@ export default function Projects() {
                     </center>
 
                     Once we have our map, we proceed to navigate with it, to do this we must know the route, and if we are getting closer or further away, or even if we have already arrived.
-                   
               
                     <p></p>
-                
+
+                    To move,I used VFF as I did the last exercise, so again I have some like this:
+                    
+                    <center>
+                     <img src={vff} width={350} height={350} alt='Large Pizza' />
+                    </center>
+
             
 
             
