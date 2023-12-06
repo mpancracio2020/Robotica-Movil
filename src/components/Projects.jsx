@@ -23,6 +23,7 @@ import StyledCard from "./StyledCard";
 var laserD = require('../images/laser_def.png')
 var grad = require('../images/1.png')
 var vff = require('../images/Virtual-Force-Field-algorithm.png')
+var fsm = require('../images/p1_RM.png')
 
 export default function Projects() {
   const [mainProjects, setMainProjects] = React.useState([]);
@@ -104,6 +105,9 @@ export default function Projects() {
                         {"\n"}
                         {"\n"}
                         <span> </span>
+                    <center>
+                      <img src={fsm} width={350} height={350} alt='Large Pizza' />
+                    </center>
                     
                       
 
