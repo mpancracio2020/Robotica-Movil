@@ -106,7 +106,7 @@ export default function Projects() {
                         {"\n"}
                         <span> </span>
                     <center>
-                      <img src={fsm} width={550} height={550} alt='Large Pizza' />
+                      <img src={fsm} width={650} height={550} alt='Large Pizza' />
                     </center>
                     
                       {"\n"}
@@ -127,15 +127,15 @@ export default function Projects() {
                         
                     This default mode is spiral, but depending on whether or not the robot has an object nearby after having to go backwards, it will {"\n"}
                     change to straight forward or not. If there is nothing nearby, the robot will randomly decide to move forward straight or in a spiral.{"\n"}
-                      {"\n"}
-                        {"\n"}
-                        <span> </span>
+                    {"\n"}
+                    {"\n"}
+                    <span> </span>
                     
                   
-                     Here is an example video: {"\n"} {"\n"}
+                     Here is an example video: {"\n"}
                      {"\n"}
-                        {"\n"}
-                        <span> </span>
+                      {"\n"}
+                      <span> </span>
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/xwCpgUhGOrc?si=8J8rmt9WVKy6X2y-" 
              title="YouTube video player" frameborder="0" allow="fullscreen;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
              allowfullscreen></iframe>  </center>
