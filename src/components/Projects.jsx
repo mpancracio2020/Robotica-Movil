@@ -106,10 +106,12 @@ export default function Projects() {
                         {"\n"}
                         <span> </span>
                     <center>
-                      <img src={fsm} width={350} height={350} alt='Large Pizza' />
+                      <img src={fsm} width={550} height={550} alt='Large Pizza' />
                     </center>
                     
-                      
+                      {"\n"}
+                        {"\n"}
+                        <span> </span>
 
                     Before moving, the robot will check if there is any object nearby with the laser. If there is,{"\n"} 
                     the robot will go backwards for 3 seconds. This would be his first state.{"\n"}
@@ -131,6 +133,9 @@ export default function Projects() {
                     
                   
                      Here is an example video: {"\n"} {"\n"}
+                     {"\n"}
+                        {"\n"}
+                        <span> </span>
                     <center><iframe width="560" height="315" src="https://www.youtube.com/embed/xwCpgUhGOrc?si=8J8rmt9WVKy6X2y-" 
              title="YouTube video player" frameborder="0" allow="fullscreen;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
              allowfullscreen></iframe>  </center>
