@@ -445,6 +445,58 @@ export default function Projects() {
               ))}
             </div>         
             </div>
+
+
+           { /*------P5---------*/}
+           <div>
+            <h1> Montecarlo Visual Loc<Icon icon="meteocons:smoke-particles-fill" className="display-4" /></h1>
+            <div className="accordion">
+              {accordionData.map(({ title, content }) => (
+                <Accordion title={'More content..'} 
+                  content={
+                    
+                    <p>In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
+                    <center>
+                     <img src={grad} width={350} height={350} alt='Large Pizza' />
+                    </center>
+
+                    Once we have our map, we proceed to navigate with it, to do this we must know the route, and if we are getting closer or further away, or even if we have already arrived.
+              
+                
+                 
+                    <p></p>
+
+                    To move,I used VFF as I did the last exercise, so again I have some like this:
+                    
+                    <center>
+                     <img src={vff} width={350} height={350} alt='Large Pizza' />
+                    </center>
+
+                    <p></p>
+
+                    <h3>Issues and solutions</h3>
+                      <p>
+                        One problem was diagonal positions, so the robot frequently goes diagonally and thats a problem. To solve that, I have implement one more method {"\n"}
+                        to check this positions, like normal ones.
+                      </p>            
+
+            
+
+                Here is an example video: {"\n"} {"\n"}
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/XPYzEjeDVTs?si=6Xzgu4VeYGlJ8ZnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+                    
+                    
+              </p>
+            
+
+
+
+                    } />
+                 
+              ))}
+            </div>         
+            </div>
+          
           
           {/*mainProjects.length !== 0 && (
             <>
