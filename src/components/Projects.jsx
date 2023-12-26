@@ -456,7 +456,9 @@ export default function Projects() {
                   content={
                     
                     <p>
-                    <p>In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
+                    <p>
+                     <pre>
+                    In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
                     <span> </span>
                       The algorithm would be the following: 
                       {"\n"}
@@ -474,6 +476,7 @@ export default function Projects() {
                       {"\n"}
                       {"\n"}
                       <span> </span>
+                      </pre> 
                       </p>
                                          
                     <h3>Issues and solutions</h3>
