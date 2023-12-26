@@ -456,28 +456,14 @@ export default function Projects() {
                   content={
                     
                     <p>In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
-                    <center>
-                     <img src={grad} width={350} height={350} alt='Large Pizza' />
-                    </center>
-
-                    Once we have our map, we proceed to navigate with it, to do this we must know the route, and if we are getting closer or further away, or even if we have already arrived.
-              
-                
-                 
-                    <p></p>
-
-                    To move,I used VFF as I did the last exercise, so again I have some like this:
-                    
-                    <center>
-                     <img src={vff} width={350} height={350} alt='Large Pizza' />
-                    </center>
-
-                    <p></p>
-
+                    <span> </span>
+                   
                     <h3>Issues and solutions</h3>
                       <p>
-                        One problem was diagonal positions, so the robot frequently goes diagonally and thats a problem. To solve that, I have implement one more method {"\n"}
-                        to check this positions, like normal ones.
+                        
+                        A problem with doing the practice in no_unibotics turned out to be the computing capacity of my machine, since my processor is somewhat old,{"\n"}
+                        I could not iterate my implementation with many particles.{"\n"}
+                        
                       </p>            
 
             
