@@ -455,6 +455,7 @@ export default function Projects() {
                 <Accordion title={'More content..'} 
                   content={
                     
+                    <p>
                     <p>In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
                     <span> </span>
                       The algorithm would be the following: 
@@ -473,6 +474,7 @@ export default function Projects() {
                       {"\n"}
                       {"\n"}
                       <span> </span>
+                      </p>
                                          
                     <h3>Issues and solutions</h3>
                       <p>
