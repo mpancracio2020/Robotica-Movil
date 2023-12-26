@@ -458,9 +458,9 @@ export default function Projects() {
                     <p>In this task we must implement a particle filter, due to certain problems with the platform I have done my implementation in no_unibotics{"\n"}
                     <span> </span>
                       The algorithm would be the following: {"\n"}
-                      {"\t"}1. We generate the particles randomly.{"\n"}
-                      {"\t"}2. We calculate their weights in comparison to each particle laser and the robot laser.{"\n"}
-                      {"\t"}3. We readjust the particles based on said weights, if there is 0 weight that particle will disappear{"\n"}
+                      {"\t"}1. We generate the particles randomly.{"\n"} <span> </span>
+                      {"\t"}2. We calculate their weights in comparison to each particle laser and the robot laser.{"\n"} <span> </span>
+                      {"\t"}3. We readjust the particles based on said weights, if there is 0 weight that particle will disappear{"\n"} <span> </span>
                                          
                     <h3>Issues and solutions</h3>
                       <p>
