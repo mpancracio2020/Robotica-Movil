@@ -490,7 +490,7 @@ export default function Projects() {
             
 
                 Here is an example video: {"\n"} {"\n"}
-                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/XPYzEjeDVTs?si=6Xzgu4VeYGlJ8ZnS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
+                    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/H-_eovWaxSM?si=Qj06qoeYP5e_4MAg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </center>
                     
                     
               </p>
